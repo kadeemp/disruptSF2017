@@ -17,26 +17,48 @@ class FirstViewController: UIViewController, LineChartDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+
         lineChart.colors[0] = UIColor(colorLiteralRed: 236.0/255.0, green: 27.0/255.0, blue: 82.0/255.0, alpha: 1.0)
 
         lineChart.y.axis.visible = false
         lineChart.y.axis.inset = 30
         lineChart.delegate = self
-        
+
+
         buildLineChart()
         lineChart.animation.enabled = true
-        
+        addAxisLabels()
+
         
     }
+    func addAxisLabels() {
+        let xAxisLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        xAxisLabel.center = CGPoint(x: 290, y: 660)
+        xAxisLabel.text = "Date"
+        self.view.addSubview(xAxisLabel)
+
+        let yAxisLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        yAxisLabel.center = CGPoint(x: 8, y: 285)
+        yAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        yAxisLabel.text = "Blood Sugar Level"
+        self.view.addSubview(yAxisLabel)
+
+    }
+
     
     func buildLineChart(){
         
         
         let glucoseFiles = Helper.getGlucose()
         self.glucoseLineData = glucoseFiles.map{ CGFloat($0.rawValue) }
+        print(self.glucoseLineData)
         
         lineChart.addLine(glucoseLineData)
+        let maxLine = Array(repeating: CGFloat(300), count: glucoseLineData.count)
+        let minLine = Array(repeating: CGFloat(30), count: glucoseLineData.count)
+
+        lineChart.addLine(maxLine)
+        lineChart.addLine(minLine)
         
     }
 
