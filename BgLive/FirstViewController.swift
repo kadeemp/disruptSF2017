@@ -29,12 +29,35 @@ class FirstViewController: UIViewController, LineChartDelegate {
         lineChart.animation.enabled = true
         addAxisLabels()
 
-        
+
+
+        lineChart.highlightDataPoints(10)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+         var graphAnimator = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(FirstViewController.animateGraphPoints), userInfo: nil, repeats: true)
+    }
+
+
+    var x:Int = 0
+    func animateGraphPoints(){
+
+        lineChart.highlightDataPoints(x)
+        if (x <= 21) {
+           x = x + 1
+        }
+        else if x == 22 {
+            x = 0
+        }
+
+
+
+
     }
     func addAxisLabels() {
         let xAxisLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
         xAxisLabel.center = CGPoint(x: 290, y: 660)
-        xAxisLabel.text = "Date"
+        xAxisLabel.text = "Hour"
         self.view.addSubview(xAxisLabel)
 
         let yAxisLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))

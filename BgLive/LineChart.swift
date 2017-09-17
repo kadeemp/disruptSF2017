@@ -133,9 +133,13 @@ open class LineChart: UIView {
     
     // category10 colors from d3 - https://github.com/mbostock/d3/wiki/Ordinal-Scales
     open var colors: [UIColor] = [
+        //Main Line
         UIColor(red: 0.121569, green: 0.466667, blue: 0.705882, alpha: 1),
+        //Max Line
         UIColor(red: 1, green: 0.498039, blue: 0.054902, alpha: 1),
+        //Min Line
         UIColor(red: 0.172549, green: 0.627451, blue: 0.172549, alpha: 1),
+
         UIColor(red: 0.839216, green: 0.152941, blue: 0.156863, alpha: 1),
         UIColor(red: 0.580392, green: 0.403922, blue: 0.741176, alpha: 1),
         UIColor(red: 0.54902, green: 0.337255, blue: 0.294118, alpha: 1),
@@ -231,8 +235,7 @@ open class LineChart: UIView {
         }
         return result
     }
-    
-    
+
     
     /**
      * Handle touch events.
@@ -248,6 +251,7 @@ open class LineChart: UIView {
         let yValues: [CGFloat] = getYValuesForXValue(rounded)
         highlightDataPoints(rounded)
         delegate?.didSelectDataPoint(CGFloat(rounded), yValues: yValues)
+
     }
     
     
@@ -273,7 +277,7 @@ open class LineChart: UIView {
     /**
      * Highlight data points at index.
      */
-    fileprivate func highlightDataPoints(_ index: Int) {
+    public func highlightDataPoints(_ index: Int) {
         for (lineIndex, dotsData) in dotsDataStore.enumerated() {
             // make all dots white again
             for dot in dotsData {
