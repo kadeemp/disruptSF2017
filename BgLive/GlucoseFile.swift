@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GlucoseFile{
+struct GlucoseFile {
     
     
     var dateCollected: Date

@@ -64,3 +64,17 @@ struct Helper {
     }
     
 }
+
+
+extension String {
+    func cleanPhoneNumber() -> String {
+        var cleanString: String = self
+        
+        if let regex = try? NSRegularExpression(pattern: "-|\\s|\\(|\\)") {
+            let range = NSMakeRange(0, self.characters.count)
+            cleanString = regex.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "")
+        }
+        
+        return cleanString
+    }
+}
