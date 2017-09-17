@@ -22,6 +22,7 @@ class FirstViewController: UIViewController, LineChartDelegate {
 
         lineChart.y.axis.visible = false
         lineChart.y.axis.inset = 30
+        lineChart.x.axis.inset = 40
         lineChart.delegate = self
 
 
@@ -74,7 +75,7 @@ class FirstViewController: UIViewController, LineChartDelegate {
         
         let glucoseFiles = Helper.getGlucose()
         self.glucoseLineData = glucoseFiles.map{ CGFloat($0.rawValue) }
-        print(self.glucoseLineData)
+
         
         lineChart.addLine(glucoseLineData)
         let maxLine = Array(repeating: CGFloat(300), count: glucoseLineData.count)

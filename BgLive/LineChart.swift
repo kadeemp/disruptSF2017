@@ -541,7 +541,7 @@ open class LineChart: UIView {
         let (start, stop, step) = self.y.ticks
         for i in stride(from: start, through: stop, by: step){
             yValue = self.bounds.height - self.y.scale(i) - (y.axis.inset * 1.5)
-            let label = UILabel(frame: CGRect(x: 0, y: yValue, width: y.axis.inset, height: y.axis.inset))
+            let label = UILabel(frame: CGRect(x: 10, y: yValue, width: y.axis.inset, height: y.axis.inset))
             label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.caption2)
             label.textAlignment = .center
             label.text = String(Int(round(i)))
