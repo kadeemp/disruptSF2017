@@ -10,9 +10,11 @@ import UIKit
 
 class EContactCollectionViewCell: UICollectionViewCell {
     
-    // Name
-    // Picture
-    
-    
+    var name = ""
+    var number = ""
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var contactImage: UIImageView!
     
 }

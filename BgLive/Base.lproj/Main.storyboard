@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Emergency Contact View Controller-->
+        <!--Item-->
         <scene sceneID="UcC-A5-rgI">
             <objects>
-                <viewController id="0nq-e1-MyO" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                <viewController id="0nq-e1-MyO" customClass="EmergencyContactsViewController" customModule="BgLive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OaG-Gj-iAp"/>
                         <viewControllerLayoutGuide type="bottom" id="rhg-m4-KEr"/>
@@ -79,6 +79,11 @@
                                             <constraint firstItem="rOc-4e-gPE" firstAttribute="centerY" secondItem="uMW-QU-hM1" secondAttribute="centerY" id="k6P-Rl-mdv"/>
                                             <constraint firstItem="sVQ-sd-aQ7" firstAttribute="centerX" secondItem="uMW-QU-hM1" secondAttribute="centerX" id="mmk-Hi-4ed"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="contactImage" destination="575-z7-ari" id="b5u-PC-wIc"/>
+                                            <outlet property="nameLabel" destination="UxZ-sy-QVQ" id="FAm-Qw-TJJ"/>
+                                            <outlet property="numberLabel" destination="s2Y-Tx-H13" id="eeb-om-bnE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -94,7 +99,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0d-Al-U1t">
                                 <rect key="frame" x="329" y="36" width="22" height="22"/>
                                 <connections>
-                                    <segue destination="8rJ-Kc-sve" kind="show" id="Oa9-PG-clt"/>
+                                    <action selector="addButton:" destination="0nq-e1-MyO" eventType="touchUpInside" id="dku-jX-1rU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,6 +115,11 @@
                             <constraint firstItem="VMR-pe-Aaa" firstAttribute="top" secondItem="OaG-Gj-iAp" secondAttribute="bottom" constant="8" id="yL9-zh-2f5"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9cN-hF-nXV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="R6G-hc-BwL" id="Vpu-J6-A0g"/>
+                        <segue destination="8rJ-Kc-sve" kind="show" identifier="add" id="P5M-CF-x7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zN-Q9-YUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,6 +157,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="xBj-e9-sBW" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="0nq-e1-MyO" kind="relationship" relationship="viewControllers" id="vsh-eT-G3l"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

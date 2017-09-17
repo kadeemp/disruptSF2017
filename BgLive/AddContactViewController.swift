@@ -9,13 +9,21 @@
 import UIKit
 import Contacts
 
+
+protocol ContactUpdateDelegate {
+    
+    func updateContacts(contacts: [Contact])
+    
+}
+
 class AddContactViewController: UIViewController {
 
     var checked: [Contact] = []
     var contacts: [Contact] = []
     var filteredContacts: [Contact] = []
-    
     var contactStore: CNContactStore!
+    
+    var delegate : ContactUpdateDelegate?
     
     
     lazy var tableView: UITableView = {
@@ -165,6 +173,7 @@ class AddContactViewController: UIViewController {
     
     func close() {
         completion?(checked)
+        delegate!.updateContacts(contacts: checked)
         self.dismiss(animated: true, completion: nil)
     }
 }
