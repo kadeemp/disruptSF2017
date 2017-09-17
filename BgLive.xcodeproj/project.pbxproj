@@ -17,6 +17,8 @@
 		BD335E8E1F6DFAE70062CF2E /* UIPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD335E8D1F6DFAE70062CF2E /* UIPaddedTextField.swift */; };
 		BD335E901F6DFE050062CF2E /* MainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD335E8F1F6DFE050062CF2E /* MainUser.swift */; };
 		BD335E931F6E01A60062CF2E /* LiveUpdates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD335E911F6E01A60062CF2E /* LiveUpdates.storyboard */; };
+		BD335E951F6E072F0062CF2E /* EmergencyContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD335E941F6E072F0062CF2E /* EmergencyContactsViewController.swift */; };
+		BD335E971F6E08E80062CF2E /* EContactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD335E961F6E08E80062CF2E /* EContactCollectionViewCell.swift */; };
 		BDFF36E51F6DD32700786F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF36E41F6DD32700786F79 /* AppDelegate.swift */; };
 		BDFF36E71F6DD32700786F79 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF36E61F6DD32700786F79 /* FirstViewController.swift */; };
 		BDFF36E91F6DD32700786F79 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF36E81F6DD32700786F79 /* AddContactViewController.swift */; };
@@ -38,6 +40,8 @@
 		BD335E8D1F6DFAE70062CF2E /* UIPaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPaddedTextField.swift; sourceTree = "<group>"; };
 		BD335E8F1F6DFE050062CF2E /* MainUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainUser.swift; sourceTree = "<group>"; };
 		BD335E921F6E01A60062CF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LiveUpdates.storyboard; sourceTree = "<group>"; };
+		BD335E941F6E072F0062CF2E /* EmergencyContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContactsViewController.swift; sourceTree = "<group>"; };
+		BD335E961F6E08E80062CF2E /* EContactCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EContactCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDFF36E11F6DD32700786F79 /* BgLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BgLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFF36E41F6DD32700786F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDFF36E61F6DD32700786F79 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				BD335E8F1F6DFE050062CF2E /* MainUser.swift */,
 				BD335E891F6DF7D30062CF2E /* ContactsTableViewCell.swift */,
 				BD335E871F6DF3B30062CF2E /* Contact.swift */,
+				BD335E941F6E072F0062CF2E /* EmergencyContactsViewController.swift */,
+				BD335E961F6E08E80062CF2E /* EContactCollectionViewCell.swift */,
 				BDFF36EA1F6DD32800786F79 /* Main.storyboard */,
 				BD335E911F6E01A60062CF2E /* LiveUpdates.storyboard */,
 				BDFF36ED1F6DD32800786F79 /* Assets.xcassets */,
@@ -247,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD335E8A1F6DF7D30062CF2E /* ContactsTableViewCell.swift in Sources */,
+				BD335E951F6E072F0062CF2E /* EmergencyContactsViewController.swift in Sources */,
+				BD335E971F6E08E80062CF2E /* EContactCollectionViewCell.swift in Sources */,
 				BD335E861F6DDDA50062CF2E /* GlucoseFile.swift in Sources */,
 				BDFF36F91F6DD38D00786F79 /* LineChart.swift in Sources */,
 				BD335E901F6DFE050062CF2E /* MainUser.swift in Sources */,
